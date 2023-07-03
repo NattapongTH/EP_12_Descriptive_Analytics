@@ -1,16 +1,11 @@
-# <p align="center"> The Journey into Time Series:<br> Beginning with Descriptive Analytics  </p>
-### <p align="center"> Data Mastery Series - Episode 11: The Art of Forecasting (Part 2) </p>
+# <p align="center"> The Journey into Time Series:<br> Unveiling Descriptive Analytics  </p>
+### <p align="center"> Data Mastery Series - Episode 12: The Art of Forecasting (Part 3) </p>
 
 ---
 
-Welcome to my GitHub repository. This section provides a code walkthrough and explanations for the descriptive analytics concepts we've explored in the context of time-series analysis.
+Welcome to my GitHub repository. This section provides a code of my blog (link Web:)
 
-**Data source:** 
-https://github.com/NattapongTH/EP_11_Descriptive_Analytics/blob/main/EP11.xlsx
 
-Sample Dataset:
-<br>
-![alt](https://github.com/NattapongTH/EP_11_Descriptive_Analytics/blob/main/Photo/11.%20Dataset.png)
 
 Before we begin, let's set up our environment:
 
