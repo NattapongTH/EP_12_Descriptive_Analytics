@@ -53,14 +53,12 @@ output:
 - For SKU B: Mean =  41.97826086956522 , Median =  42.0 , Mode =  44
 - For SKU C: Mean =  23.282608695652176 , Median =  24.0 , Mode =  21
 
-.
-
 <br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_1.png)
+![Measure of Centrality 1](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_1.png)
 <br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_2.png)
+![Measure of Centrality 2](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_2.png)
 <br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_3.png)
+![Measure of Centrality 3](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_3.png)
 <br>
 
 **2. Measures of Variation**
