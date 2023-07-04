@@ -53,6 +53,8 @@ output:
 - For SKU B: Mean =  41.97826086956522 , Median =  42.0 , Mode =  44
 - For SKU C: Mean =  23.282608695652176 , Median =  24.0 , Mode =  21
 
+.
+
 <br>
 ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_1.png)
 <br>
