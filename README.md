@@ -24,6 +24,14 @@ import plotly.io as pio
 
 You can get the data we will be using from this source. Below, you will find a sample of the dataset, a figure of the sample dataset, and a line chart representing it.
 
+```python 
+df_pivot = pd.read_excel('your link')
+df_unpivoted = pd.melt(df_pivot, id_vars=['date'], var_name='sku', value_name='value')
+df_unpivoted = df_unpivoted.sort_values(['date', 'sku']).reset_index(drop=True)
+df = df_unpivoted.copy()
+df
+```
+
 **Data source:** 
 https://github.com/NattapongTH/EP_11_Descriptive_Analytics/blob/main/EP11.xlsx
 
@@ -221,22 +229,20 @@ df.groupby('sku')['value'].describe(percentiles=perc, include=include).T
 ```
 <br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.3.png) <br>
 <br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/3_1.png) <br>
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/3_1.png) <br>
 <br>
 
 
 **2. YData Profiling (Previously Pandas Profiling):**
 
 ```python 
-code
+!pip install ydata-profiling
 ```
 
 ```python 
-code
-```
+import pandas as pd
+from ydata_profiling import ProfileReport
 
-```python 
-code
+ProfileReport(df_pivot)
 ```
 
 <br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/5.png) <br>
@@ -247,15 +253,15 @@ code
 **3. D-Tale:**
 
 ```python 
-code
+!pip install -U dtale
 ```
 
 ```python 
-code
-```
+import dtale
+import dtale.app as dtale_app
 
-```python 
-code
+dtale_app.USE_COLAB = True
+dtale.show(df_pivot)
 ```
 
 <br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/7.png) <br>
@@ -265,15 +271,15 @@ code
 **4. SweetViz:**
 
 ```python 
-code
+!pip install sweetviz
 ```
 
 ```python 
-code
-```
+import sweetviz as sv
+import pandas as pd
 
-```python 
-code
+report = sv.analyze(df_pivot)
+report.show_notebook()
 ```
 
 <br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/9.png) <br>
@@ -283,15 +289,14 @@ code
 **5. DataPrep:**
 
 ```python 
-code
+!pip install dataprep
 ```
 
 ```python 
-code
-```
+import pandas as pd
+from dataprep.eda import create_report
 
-```python 
-code
+create_report(df_pivot)
 ```
 
 <br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/11.png) <br>
