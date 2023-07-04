@@ -73,9 +73,9 @@ output:
 - For SKU B: Mean =  41.97826086956522 , Median =  42.0 , Mode =  44
 - For SKU C: Mean =  23.282608695652176 , Median =  24.0 , Mode =  21
 
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_1.png)
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_2.png)
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_3.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_1.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_2.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_3.png) <br>
 <br>
 
 **2. Measures of Variation**
@@ -100,9 +100,9 @@ output:
 - Range of SKU B: 62 - 23 = 39
 - Range of SKU C: 41 - 6 = 35
 
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_1.png)
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_2.png)
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_3.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_1.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_2.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_3.png) <br>
 <br>
 
 2.2 Variance:
@@ -187,12 +187,12 @@ for sku in skus:
 ```
 
 output:
-- Skewness of SKU A: -0.0045463589746413575, Kurtosis of SKU A: -1.061281248417483
-
-- Skewness of SKU B: 0.04283073151454455, Kurtosis of SKU B: -0.589672638621972
-
-- Skewness of SKU C: -0.042340305446899616, Kurtosis of SKU C: -0.59944736404992
-
+- Skewness of SKU A: -0.0045463589746413575
+- Kurtosis of SKU A: -1.061281248417483
+- Skewness of SKU B: 0.04283073151454455
+- Kurtosis of SKU B: -0.589672638621972
+- Skewness of SKU C: -0.042340305446899616
+- Kurtosis of SKU C: -0.59944736404992
 
 
 *Special Note: Powerful Python Libraries For EDA*
@@ -204,9 +204,7 @@ This function gives us a summary of the statistical measures of our data distrib
 df.groupby('sku')['value'].describe().T
 ```
 
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.1.png)
-<br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.1.png) <br>
 
 ```python 
 perc = [.10, .20, .30, .40, .50, .60, .70, .80, .90]  # list of percentiles
@@ -215,23 +213,15 @@ include =['object', 'float', 'int']  # list of data types
 df.groupby('sku')['value'].describe(percentiles=perc, include=include)
 ```
 
-<<<<<<< HEAD
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.2.png)
-<br>
+
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.2.png) <br>
 
 ```python 
 df.groupby('sku')['value'].describe(percentiles=perc, include=include).T
 ```
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.3.png)
-<br>
-
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/3_1.png)
-=======
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/3_1.png)
->>>>>>> 2f32ef6837c6a56a8c0db7fa762bb5055036f6d2
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.3.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/3_1.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/3_1.png) <br>
 <br>
 
 
@@ -249,9 +239,9 @@ code
 code
 ```
 
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/5.png)
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/6.png)
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/6.1.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/5.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/6.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/6.1.png) <br>
 <br>
 
 **3. D-Tale:**
@@ -268,8 +258,8 @@ code
 code
 ```
 
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/7.png)
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/8.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/7.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/8.png) <br>
 <br>
 
 **4. SweetViz:**
@@ -286,8 +276,8 @@ code
 code
 ```
 
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/9.png)
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/10.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/9.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/10.png) <br>
 <br>
 
 **5. DataPrep:**
@@ -304,12 +294,14 @@ code
 code
 ```
 
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/11.png)
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/12.png)
-<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/13.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/11.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/12.png) <br>
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/13.png) <br>
 <br>
 
+
 Note: Please note that Python libraries are updated frequently, and as such, the import functions may change over time. If you plan to use these libraries, please ensure you read their documentation to stay up to date with any changes.
+
 ---
 
 Thank you for your interest in this project! Feel free to contribute, share your thoughts, or ask any questions you might have. If you found this repository useful, don't forget to give it a star ⭐. I look forward to connecting with you! 🚀
