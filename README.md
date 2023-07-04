@@ -1,13 +1,13 @@
-# <p align="center"> The Journey into Time Series:<br> Unveiling Descriptive Analytics  </p>
-### <p align="center"> Data Mastery Series - Episode 12: The Art of Forecasting (Part 3) </p>
+# <p align="center">The Journey into Time Series:<br> Unveiling Descriptive Analytics </p>
+## <p align="center"> Data Mastery Series - Episode 12: The Art of Forecasting (Part 3) </p>
 
 ---
 
-Welcome to my GitHub repository. This section provides a code of my blog (link Web:xxx)
+Welcome to my GitHub repository for the 12th episode of the Data Mastery Series. 
+This repository contains all the code used in my corresponding blog post (link: [Web:xxx]()).
 
+To begin, we need to set up our Python environment with the necessary libraries:
 
-
-Before we begin, let's set up our environment:
 
 ```python 
 import numpy as np
@@ -22,7 +22,7 @@ from plotly.subplots import make_subplots
 import plotly.io as pio
 ```
 
-To wrap up previous chapter, following is like of dataset,sample dataset figure and line chart.
+You can get the data we will be using from this source. Below, you will find a sample of the dataset, a figure of the sample dataset, and a line chart representing it.
 
 **Data source:** 
 https://github.com/NattapongTH/EP_11_Descriptive_Analytics/blob/main/EP11.xlsx
@@ -36,22 +36,8 @@ https://github.com/NattapongTH/EP_11_Descriptive_Analytics/blob/main/EP11.xlsx
 <br>
 ![alt](https://github.com/NattapongTH/EP_11_Descriptive_Analytics/blob/main/Photo/21.%20Line%20Chart.png)
 
-Python code for generating the Line Charts:
-```python 
-fig = go.Figure()
 
-for sku in df['sku'].unique():
-    filtered_df = df[df['sku'] == sku]
-    fig.add_trace(go.Scatter(x=filtered_df['date'], y=filtered_df['value'], name=sku))
-
-fig.update_layout(title="Line Chart: Value by SKU",
-                  xaxis=dict(title="Date"),
-                  yaxis=dict(title="Value"))
-
-pio.show(fig)
-```
-
-This chapter will focus core facets of descriptive analytics are 'Measures of Centrality', 'Measures of Variation', 'Measures of Localization', and 'Measures of Symmetry',
+In this episode, we delve into four core facets of descriptive analytics: 'Measures of Centrality', 'Measures of Variation', 'Measures of Localization', and 'Measures of Symmetry'. Let's take a closer look at each.
 <br>
 
 **1. Measures of Centrality:**
@@ -153,7 +139,7 @@ output:
 *Special Note: Powerful Python Libraries For EDA*
 
 **1. .describe()**
-These measures help us understand the symmetry and structure of our data distribution.
+This function gives us a summary of the statistical measures of our data distribution.
 
 ```python 
 code
@@ -256,9 +242,9 @@ code
 ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/13.png)
 <br>
 
-Note: Python Libraries always have update and sometime the import function will be change. if you want to use it, please reconfirm by read their document.
+Note: Please note that Python libraries are updated frequently, and as such, the import functions may change over time. If you plan to use these libraries, please ensure you read their documentation to stay up to date with any changes.
 
-"Thank you for your interest in this project! Please feel free to contribute or share your thoughts. Don't forget to leave a star ⭐ if this repository was useful for you. Looking forward to connecting with you! 🚀
+Thank you for your interest in this project! Feel free to contribute, share your thoughts, or ask any questions you might have. If you found this repository useful, don't forget to give it a star ⭐. I look forward to connecting with you! 🚀
 
 <p align="center">
 <a href="https://web.facebook.com/DonatoStory"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=for-the-badge&logo=Facebook&logoColor=white"/></a>
