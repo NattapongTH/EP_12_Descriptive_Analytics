@@ -24,6 +24,9 @@ import plotly.io as pio
 
 You can get the data we will be using from this source. Below, you will find a sample of the dataset, a figure of the sample dataset, and a line chart representing it.
 
+**Data source:** 
+https://github.com/NattapongTH/EP_11_Descriptive_Analytics/blob/main/EP11.xlsx
+
 ```python 
 df_pivot = pd.read_excel('your link')
 df_unpivoted = pd.melt(df_pivot, id_vars=['date'], var_name='sku', value_name='value')
@@ -31,9 +34,6 @@ df_unpivoted = df_unpivoted.sort_values(['date', 'sku']).reset_index(drop=True)
 df = df_unpivoted.copy()
 df
 ```
-
-**Data source:** 
-https://github.com/NattapongTH/EP_11_Descriptive_Analytics/blob/main/EP11.xlsx
 
 **Sample Dataset:**
 <br>
