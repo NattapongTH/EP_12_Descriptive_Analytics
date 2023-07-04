@@ -73,12 +73,9 @@ output:
 - For SKU B: Mean =  41.97826086956522 , Median =  42.0 , Mode =  44
 - For SKU C: Mean =  23.282608695652176 , Median =  24.0 , Mode =  21
 
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_1.png)
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_2.png)
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_3.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_1.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_2.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/1_3.png)
 <br>
 
 **2. Measures of Variation**
@@ -103,12 +100,9 @@ output:
 - Range of SKU B: 62 - 23 = 39
 - Range of SKU C: 41 - 6 = 35
 
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_1.png)
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_2.png)
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_3.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_1.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_2.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/2_3.png)
 <br>
 
 2.2 Variance:
@@ -221,6 +215,7 @@ include =['object', 'float', 'int']  # list of data types
 df.groupby('sku')['value'].describe(percentiles=perc, include=include)
 ```
 
+<<<<<<< HEAD
 <br>
 ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.2.png)
 <br>
@@ -234,6 +229,9 @@ df.groupby('sku')['value'].describe(percentiles=perc, include=include).T
 
 <br>
 ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/3_1.png)
+=======
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/3_1.png)
+>>>>>>> 2f32ef6837c6a56a8c0db7fa762bb5055036f6d2
 <br>
 
 
@@ -251,12 +249,9 @@ code
 code
 ```
 
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/5.png)
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/6.png)
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/6.1.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/5.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/6.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/6.1.png)
 <br>
 
 **3. D-Tale:**
@@ -273,10 +268,8 @@ code
 code
 ```
 
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/7.png)
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/8.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/7.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/8.png)
 <br>
 
 **4. SweetViz:**
@@ -293,10 +286,8 @@ code
 code
 ```
 
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/9.png)
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/10.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/9.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/10.png)
 <br>
 
 **5. DataPrep:**
@@ -313,12 +304,9 @@ code
 code
 ```
 
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/11.png)
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/12.png)
-<br>
-![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/13.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/11.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/12.png)
+<br> ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/13.png)
 <br>
 
 Note: Please note that Python libraries are updated frequently, and as such, the import functions may change over time. If you plan to use these libraries, please ensure you read their documentation to stay up to date with any changes.
