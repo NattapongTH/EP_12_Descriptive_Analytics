@@ -45,7 +45,27 @@ In this episode, we delve into four core facets of descriptive analytics: 'Measu
 These statistical tools illustrate Centrality measures describe the 'center' of a dataset. Common measures include the mean (average), median (middle value), and mode (most common value).
 
 ```python 
-code
+# Filter data for each SKU
+df_A = df[df['sku'] == 'A']
+df_B = df[df['sku'] == 'B']
+df_C = df[df['sku'] == 'C']
+
+# Measures of Centrality
+mean_A = df_A['value'].mean()
+median_A = df_A['value'].median()
+mode_A = df_A['value'].mode()
+
+mean_B = df_B['value'].mean()
+median_B = df_B['value'].median()
+mode_B = df_B['value'].mode()
+
+mean_C = df_C['value'].mean()
+median_C = df_C['value'].median()
+mode_C = df_C['value'].mode()
+
+print("For SKU A: Mean = ", mean_A, ", Median = ", median_A, ", Mode = ", mode_A[0])
+print("For SKU B: Mean = ", mean_B, ", Median = ", median_B, ", Mode = ", mode_B[0])
+print("For SKU C: Mean = ", mean_C, ", Median = ", median_C, ", Mode = ", mode_C[0])
 ```
 
 output:
@@ -67,7 +87,15 @@ These statistical tools illustrate the dispersion and distribution of a dataset.
 2.1 Range:
 
 ```python 
-code
+# Calculating Range for SKU A, B and C
+range_A = df[df['sku']=='A']['value'].max() - df[df['sku']=='A']['value'].min()
+range_B = df[df['sku']=='B']['value'].max() - df[df['sku']=='B']['value'].min()
+range_C = df[df['sku']=='C']['value'].max() - df[df['sku']=='C']['value'].min()
+
+# Printing the range
+print(f"Range of SKU A: {df[df['sku'] == 'A']['value'].max()} - {df[df['sku'] == 'A']['value'].min()} = {range_A}")
+print(f"Range of SKU B: {df[df['sku'] == 'B']['value'].max()} - {df[df['sku'] == 'B']['value'].min()} = {range_B}")
+print(f"Range of SKU C: {df[df['sku'] == 'C']['value'].max()} - {df[df['sku'] == 'C']['value'].min()} = {range_C}")
 ```
 
 output:
@@ -86,7 +114,15 @@ output:
 2.2 Variance:
 
 ```python 
-code
+# Calculating Variance for SKU A, B and C
+var_A = df[df['sku']=='A']['value'].var()
+var_B = df[df['sku']=='B']['value'].var()
+var_C = df[df['sku']=='C']['value'].var()
+
+# Printing the variance
+print(f"Variance of SKU A: {var_A}")
+print(f"Variance of SKU B: {var_B}")
+print(f"Variance of SKU C: {var_C}\n")
 ```
 
 output:
@@ -97,7 +133,15 @@ output:
 2.3 Standard Deviation:
 
 ```python 
-code
+# Calculating Standard Deviation for SKU A, B and C
+std_A = df[df['sku']=='A']['value'].std()
+std_B = df[df['sku']=='B']['value'].std()
+std_C = df[df['sku']=='C']['value'].std()
+
+# Printing the standard deviation
+print(f"Standard Deviation of SKU A: {std_A}")
+print(f"Standard Deviation of SKU B: {std_B}")
+print(f"Standard Deviation of SKU C: {std_C}\n")
 ```
 
 output:
@@ -108,7 +152,15 @@ output:
 2.4 Coefficient of Variation:
 
 ```python 
-code
+# Calculating Coefficient of Variation for SKU A, B and C
+cv_A = (std_A / df[df['sku']=='A']['value'].mean()) * 100
+cv_B = (std_B / df[df['sku']=='B']['value'].mean()) * 100
+cv_C = (std_C / df[df['sku']=='C']['value'].mean()) * 100
+
+# Printing the coefficient of variation
+print(f"Coefficient of Variation of SKU A: {cv_A} %")
+print(f"Coefficient of Variation of SKU B: {cv_B} %")
+print(f"Coefficient of Variation of SKU C: {cv_C} %")
 ```
 
 output:
@@ -124,7 +176,20 @@ These measures give us more granular insight about the distribution of data with
 These measures help us understand the symmetry and structure of our data distribution.
 
 ```python 
-code
+from scipy.stats import skew, kurtosis
+
+skus = ['A', 'B', 'C']
+
+for sku in skus:
+    data = df[df['sku'] == sku]['value']
+
+    # Calculate skewness
+    skewness = skew(data)
+    print(f'Skewness of SKU {sku}: {skewness}')
+
+    # Calculate kurtosis
+    kurt = kurtosis(data)
+    print(f'Kurtosis of SKU {sku}: {kurt}\n')
 ```
 
 output:
@@ -142,16 +207,30 @@ output:
 This function gives us a summary of the statistical measures of our data distribution.
 
 ```python 
-code
+df.groupby('sku')['value'].describe().T
 ```
 
-```python 
-code
-```
+<br>
+![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.1.png)
+<br>
 
 ```python 
-code
+perc = [.10, .20, .30, .40, .50, .60, .70, .80, .90]  # list of percentiles
+include =['object', 'float', 'int']  # list of data types
+
+df.groupby('sku')['value'].describe(percentiles=perc, include=include)
 ```
+
+<br>
+![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.2.png)
+<br>
+
+```python 
+df.groupby('sku')['value'].describe(percentiles=perc, include=include).T
+```
+<br>
+![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/4.3.png)
+<br>
 
 <br>
 ![alt](https://github.com/NattapongTH/EP_12_Descriptive_Analytics/blob/main/Photo/3_1.png)
@@ -243,6 +322,7 @@ code
 <br>
 
 Note: Please note that Python libraries are updated frequently, and as such, the import functions may change over time. If you plan to use these libraries, please ensure you read their documentation to stay up to date with any changes.
+---
 
 Thank you for your interest in this project! Feel free to contribute, share your thoughts, or ask any questions you might have. If you found this repository useful, don't forget to give it a star ⭐. I look forward to connecting with you! 🚀
 
